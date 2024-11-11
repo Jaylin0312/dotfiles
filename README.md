@@ -1,3 +1,3 @@
 ## Dotfiles for MacOS
 
-![one-dark](.github/screenshot.png)
+![one-dark](.github/ff-screenshot.png)
