@@ -34,6 +34,9 @@ alias gres="git reset"
 alias github="gh repo view --web"
 alias gist="gh gist create --web"
 
+# g++
+alias gpp="g++ -std=c++17"
+
 # docker
 alias dps="docker ps -a"
 dbar() {

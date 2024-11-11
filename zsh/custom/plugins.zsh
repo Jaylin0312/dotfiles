@@ -39,22 +39,6 @@ zinit ice wait lucid blockf \
   src"z.sh"
 zinit light rupa/z
 
-# grab exa (better ls) binary
-zinit ice from"gh-r" as"command" \
-  mv"bin/exa* -> exa" \
-  atclone"
-    mv -vf completions/exa.zsh _exa
-    mv -vf man/exa.1 ${ZINIT[MAN_DIR]}/man1
-    mv -vf man/exa_colors.5 ${ZINIT[MAN_DIR]}/man5
-  " \
-  atpull"%atclone" \
-  atload"
-    alias ls='exa --color=auto -GF --icons --group-directories-first'
-    alias ll='exa --color=auto -1laF --git --icons --group-directories-first --ignore-glob=\".DS_Store*|~*\"'
-    alias lt='ll -T -L=2'
-  "
-zinit light ogham/exa
-
 # grab bat (better cat) binary
 zinit ice from"gh-r" as"command" \
   mv"bat-*/bat -> bat" \
@@ -97,7 +81,6 @@ zinit ice from"gh-r" as"command" \
   atload'
     FZF_FD_OPTS="--color always --hidden --follow --exclude .git --exclude node_modules"
     FZF_PREVIEW_FILE_COMMAND="bat --color=always --paging=never --style=plain"
-    FZF_PREVIEW_DIR_COMMAND="exa -1a --color=always --icons --group-directories-first"
     FZF_DEFAULT_OPTS="--no-mouse --bind \"tab:accept,ctrl-y:preview-page-up,ctrl-v:preview-page-down,ctrl-e:execute-silent(\${VISUAL:-code} {+} >/dev/null 2>&1)\""
     FZF_DEFAULT_COMMAND="fd --type f $FZF_FD_OPTS"
     FZF_ALT_C_OPTS="--ansi --preview \"$FZF_PREVIEW_DIR_COMMAND {} 2>/dev/null\""

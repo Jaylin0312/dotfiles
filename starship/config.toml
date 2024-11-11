@@ -5,14 +5,12 @@
 # format = """$character"""
 # right_format = """$all"""
 
-[aws]
-disabled = true
-
 [battery]
 disabled = true
 
 [cmd_duration]
 min_time = 2500
+style = "bold cyan"
 
 [container]
 disabled = true
@@ -23,7 +21,7 @@ truncate_to_repo = false
 read_only = " "
 
 [directory.substitutions]
-"~" = " ~"
+"~" = "󰌾 ~"
 " ~/Documents" = " ~/Documents"
 " ~/Downloads" = " ~/Downloads"
 " ~/Desktop" = " ~/Desktop"
@@ -42,14 +40,16 @@ disabled = true
 
 [git_branch]
 symbol = " "
+style = "bold green"
 
 [git_commit]
-tag_symbol = " "
+tag_symbol = '  '
 tag_disabled = false
 format = "[ $hash$tag]($style) "
+style = "bold blue"
 
 [git_status]
-style = "bold bright-yellow"
+style = "bold yellow"
 format = "([ $all_status$ahead_behind]($style) )"
 ignore_submodules = true
 renamed = ""
@@ -61,51 +61,78 @@ symbol = " "
 
 [hostname]
 ssh_only = true
-ssh_symbol = " "
+ssh_symbol = " "
 style = "bold green"
 format = "[$ssh_symbol$hostname]($style) "
 
 [localip]
 disabled = true
 
-[nodejs]
-symbol = " "
-
 [os.symbols]
+Alpaquita = " "
 Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
 Arch = " "
+Artix = " "
 CentOS = " "
 Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
 Fedora = " "
 FreeBSD = " "
+Garuda = "󰛓 "
 Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
 Linux = " "
+Mabox = " "
 Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
 Mint = " "
+NetBSD = " "
 NixOS = " "
-OpenBSD = " "
+OpenBSD = "󰈺 "
 openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
 Raspbian = " "
 Redhat = " "
 RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
 Ubuntu = " "
 Unknown = " "
-Windows = " "
+Void = " "
+Windows = "󰍲 "
 
 [package]
-symbol = " "
+symbol = "󰏗 "
+
+[nodejs]
+symbol = " "
 
 [php]
 symbol = " "
 
 [python]
-symbol = " "
+symbol = " "
+
+[conda]
+symbol = " "
 
 [ruby]
 symbol = " "
 
 [rust]
-symbol = " "
+symbol = "󱘗 "
 
 [username]
 format = "[ $user]($style) "
