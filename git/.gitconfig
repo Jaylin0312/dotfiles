@@ -5,6 +5,14 @@
 	# Make `git rebase` safer on macOS
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
+
+# Select different profile at different dir
+# More info: https://stackoverflow.com/questions/34597186
+# [includeIf "gitdir:~/projects/"]
+#     path = ~/.gitconfig-personal
+# [includeIf "gitdir:~/work/"]
+#     path = ~/.gitconfig-work
+
 [user]
 	name = your-name
 	email = your-email@example.com
@@ -55,6 +63,3 @@
 	hunk-header-style = omit
 	line-numbers = true
 	syntax-theme = base16
-[conditional]
-    if = "git config user.email your-other-email@example.com"
-    then = "git config user.signingkey your-other-signing-key"
